@@ -27,7 +27,7 @@ Includes responsive UI, dark mode support, server-side pagination, client-side s
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/admin-dashboard.git
+   git clone https://username:password@github.com/mohit-11-dev/admin-dashboard.git
    cd admin-dashboard
 
 2. ```npm install```
