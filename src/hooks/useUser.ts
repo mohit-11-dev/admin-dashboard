@@ -11,7 +11,7 @@ export const useUsers = (page: number) => {
     const fetchUsers = async () => {
       setLoading(true);
       try {
-        const res = await fetch(`https://reqres.in/api/users?page=${page}`, {
+        const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/users?page=${page}`, {
           headers: { "x-api-key": "reqres-free-v1" },
         });
         const data = await res.json();
