@@ -1,0 +1,32 @@
+import { useEffect, useState } from "react";
+import type { User } from "../types/user";
+
+export const useUsers = (page: number) => {
+  const [users, setUsers] = useState<User[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+  const [totalPages, setTotalPages] = useState(1);
+
+  useEffect(() => {
+    const fetchUsers = async () => {
+      setLoading(true);
+      try {
+        const res = await fetch(`https://reqres.in/api/users?page=${page}`, {
+          headers: { "x-api-key": "reqres-free-v1" },
+        });
+        const data = await res.json();
+        setUsers(data.data);
+        setTotalPages(data.total_pages);
+      } catch (e) {
+        console.error(e);
+        setError("Failed to load data");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchUsers();
+  }, [page]);
+
+  return { users, loading, error, totalPages };
+};
