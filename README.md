@@ -92,3 +92,7 @@ Each component lives in its own folder with an `index.tsx` file instead of a sin
 
 We have excluded config and setup files from coverage reports using proper ignore patterns.
 
+## Env:
+```
+VITE_API_BASE_URL=https://reqres.in/api
+```
