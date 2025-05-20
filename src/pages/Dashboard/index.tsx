@@ -5,12 +5,13 @@ import { DataTable, Navbar, Sidebar, SummaryCards } from "../../components";
 const Dashboard = () => {
   const [page, setPage] = useState(1);
   const { users, loading, error, totalPages } = useUsers(page);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
     <div className="flex">
-      <Sidebar />
+      <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
       <main className="flex-1 min-h-screen bg-gray-50">
-        <Navbar />
+        <Navbar onMenuClick={() => setIsSidebarOpen(true)} />
         <div className="p-4">
           <SummaryCards />
           {loading && <p>Loading...</p>}
