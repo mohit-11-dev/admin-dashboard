@@ -13,7 +13,7 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
   return (
     <header className="w-full bg-background text-foreground shadow p-4 flex justify-between items-center sticky top-0 z-20">
-      <button className="md:hidden" onClick={onMenuClick}>
+      <button data-testid="menu-bar" className="md:hidden" onClick={onMenuClick}>
         <Bars3Icon className="h-6 w-6" />
       </button>
       <h1 className="hidden md:block text-xl font-bold">Admin Dashboard</h1>

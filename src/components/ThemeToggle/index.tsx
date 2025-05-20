@@ -7,6 +7,7 @@ const ThemeToggle = () => {
     <button
       onClick={toggleTheme}
       className="ml-auto rounded"
+      data-testid="theme-toggle"
     >
       {theme === "dark" ? "🌙 Dark" : "☀️ Light"}
     </button>

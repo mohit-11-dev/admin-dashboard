@@ -11,18 +11,21 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     <>
       {/* Overlay */}
       <div
+        data-testid="sidebar-overlay"
         className={`fixed inset-0 bg-black bg-opacity-40 transition-opacity z-30 md:hidden 
           ${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`}
         onClick={onClose}
       />
       {/* Sidebar */}
       <aside
+        data-testid="sidebar"
         className={`fixed top-0 left-0 h-full text-background w-64 bg-background-reverse dark:bg-gray:100 h-screen shadow-lg z-40 transform transition-transform md:translate-x-0 md:static md:shadow-none 
           ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
+        data-open={isOpen}
       >
         <div className="p-4 flex justify-between items-center border-b">
           <h2 className="text-xl font-bold">Dashboard</h2>
-          <button className="md:hidden" onClick={onClose}>
+          <button data-testid="sidebar-closed" className="md:hidden" onClick={onClose}>
             <XMarkIcon className="h-6 w-6" />
           </button>
         </div>

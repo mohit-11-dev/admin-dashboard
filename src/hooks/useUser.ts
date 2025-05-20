@@ -18,8 +18,8 @@ export const useUsers = (page: number) => {
         setUsers(data.data);
         setTotalPages(data.total_pages);
       } catch (e) {
-        console.error(e);
         setError("Failed to load data");
+        console.error(e);
       } finally {
         setLoading(false);
       }
