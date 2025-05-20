@@ -9,4 +9,25 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --color-bg: #ffffff;
+  --color-text: #1f2937;
+  --color-primary: #2563eb;
+  --color-secondary: #64748b;
+  --color-muted: #f1f5f9;
+  --color-body-bg: #f9fafb;
+  --color-bg-reverse: #1f2937;
+}
+
+.dark {
+  --color-bg: #0f172a;
+  --color-text: #f8fafc;
+  --color-primary: #3b82f6;
+  --color-secondary: #94a3b8;
+  --color-muted: #1e293b;
+  --color-body-bg: #1f2937;
+  --color-bg-reverse: #f9fafb;
+}
+
+body {
+  background: var(--color-body-bg);
 }

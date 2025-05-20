@@ -17,7 +17,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       />
       {/* Sidebar */}
       <aside
-        className={`fixed top-0 left-0 h-full text-white w-64 bg-gray-800 h-screen shadow-lg z-40 transform transition-transform md:translate-x-0 md:static md:shadow-none 
+        className={`fixed top-0 left-0 h-full text-background w-64 bg-background-reverse dark:bg-gray:100 h-screen shadow-lg z-40 transform transition-transform md:translate-x-0 md:static md:shadow-none 
           ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
       >
         <div className="p-4 flex justify-between items-center border-b">
@@ -27,13 +27,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           </button>
         </div>
         <nav className="p-4 space-y-2">
-          <a href="#" className="block p-2 rounded hover:bg-gray-700">
+          <a href="/" className="block p-2 rounded hover:bg-gray-700">
             Dashboard
           </a>
-          <a href="#" className="block p-2 rounded hover:bg-gray-700">
+          <a href="/" className="block p-2 rounded hover:bg-gray-700">
             Users
           </a>
-          <a href="#" className="block p-2 rounded hover:bg-gray-700">
+          <a href="/" className="block p-2 rounded hover:bg-gray-700">
             Reports
           </a>
         </nav>

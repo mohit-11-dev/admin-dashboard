@@ -6,9 +6,9 @@ interface Props {
 
 const DataTable: React.FC<Props> = ({ users }) => {
   return (
-    <table className="w-full bg-white shadow rounded">
+    <table className="w-full bg-background text-foreground shadow rounded">
       <thead>
-        <tr className="bg-gray-100 text-left">
+        <tr className="bg-muted text-left">
           <th className="p-2">ID</th>
           <th className="p-2">Name</th>
           <th className="p-2">Email</th>
